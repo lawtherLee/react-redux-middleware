@@ -1,7 +1,7 @@
-import {combineReducers} from "redux";
-import count from "./count";
+import { combineReducers } from "redux";
+import channels from "./channels";
 
 const reducer = combineReducers({
-  count
-})
-export default reducer
+  channels,
+});
+export default reducer;

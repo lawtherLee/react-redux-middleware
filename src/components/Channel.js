@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setChannelsAction } from "../store/actions/channels";
 
 export default function Channel() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setChannelsAction());
+  }, []);
+
   return (
     <ul className="catagtory">
       <li className="select">开发者资讯</li>
@@ -31,5 +38,5 @@ export default function Channel() {
       <li>软件测试</li>
       <li>测试开发</li>
     </ul>
-  )
+  );
 }
